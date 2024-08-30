@@ -1,0 +1,87 @@
+work_dir: ./work_dir/ntu60_xsub_55_5split/joint_shiftgcn_ViTL14@336px_match
+
+# feeder
+feeder: feeders.feeder_ntu.Feeder_Shiftgcn_Match
+
+train_feeder_args:
+  data_path: data/ntu/NTU60_CS.npz
+  ntu_task: ntu60_xsub
+  zero_spilt_setting: ntu60_seen55_unseen5
+  zero_setting: ZSL
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+
+test_feeder_zsl_args:
+  data_path: data/ntu/NTU60_CS.npz
+  ntu_task: ntu60_xsub
+  zero_spilt_setting: ntu60_seen55_unseen5
+  zero_setting: ZSL
+  split: test
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+
+test_feeder_gzsl_args:
+  data_path: data/ntu/NTU60_CS.npz
+  ntu_task: ntu60_xsub
+  zero_spilt_setting: ntu60_seen55_unseen5
+  zero_setting: GZSL
+  split: test
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+
+# model
+model: model.shiftgcn_match_ntu.ModelMatch
+weights: /DATA3/cy/STAR/model/ntu60_ShiftGCN_joint_xsub_seen55_unseen5-81-94136.pt
+
+model_args:
+  # num_class: 60
+  num_point: 25
+  num_person: 2
+  # edge_importance_weighting: True
+  graph: graph.ntu_rgb_d.Graph
+  # k: 8
+  body_part: 6
+  head: ['ViT-L/14@336px']
+  graph_args:
+    labeling_mode: 'spatial'
+    # layout: 'ntu-rgb+d'
+    # strategy: 'spatial'
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.01
+lr_decay_rate: 0.1
+step: [10, 20]   # 1. [40, 60]   2. [60, 80] 3.[80, 100]
+warm_up_epoch: 0
+
+# training
+device: [0]
+batch_size: 64  # 200
+test_batch_size: 64
+num_epoch: 40 # 110
+nesterov: True
