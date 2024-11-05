@@ -1,5 +1,5 @@
 # STAR
-This repo is the official implementation for [Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition](https://arxiv.org/abs/2404.07487). The paper is accepted to ACM MM 2024.
+This repo is the official implementation for [Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition](https://dl.acm.org/doi/10.1145/3664647.3681196). The paper is accepted to ACM MM 2024.
 
 **Note**: We conduct extensive experiments on three datasets in the **ZSL** and **GZSL** settings. 
 
@@ -19,9 +19,9 @@ For NTU series datasets, we take the same data processing procedure as the [CTR-
 
 
 # Baseline Settings
-We conduct the experiment based on the official experimental settings (cross-subject, cross-view, and cross-set) of the NTU RGB+D 60, NTU RGB+D 120, and PKU-MMD II datasets. To make a fair comparison, we update the performance results of the previous studies (e.g., [SynSE](https://github.com/skelemoa/synse-zsl), [SMIE](https://github.com/YujieOuO/SMIE)) under the current experimental settings based on their public codes.
+We conduct the experiment based on the official experimental settings (cross-subject, cross-view, and cross-set) of the NTU RGB+D 60, NTU RGB+D 120, and PKU-MMD I datasets. To make a fair comparison, we update the performance results of the previous studies (e.g., [SynSE](https://github.com/skelemoa/synse-zsl), [SMIE](https://github.com/YujieOuO/SMIE)) under the current experimental settings based on their public codes.
 
-As for known and unknown categories partition strategies that the official requirements lacked, for convenience, we follow the [SynSE](https://github.com/skelemoa/synse-zsl). For NTU 60, we utilize the 55/5 and 48/12 split strategies, which include 5 and 12 unknown categories. For NTU 120, we employ the 110/10 and 96/24 split strategies. For PKU-MMD II, we take the 46/5 and 39/12 split strategies. 
+As for known and unknown categories partition strategies that the official requirements lacked, for convenience, we follow the [SynSE](https://github.com/skelemoa/synse-zsl). For NTU 60, we utilize the 55/5 and 48/12 split strategies, which include 5 and 12 unknown categories. For NTU 120, we employ the 110/10 and 96/24 split strategies. For PKU-MMD I, we take the 46/5 and 39/12 split strategies. 
 
 For the optimized experimental settings in Table 5, we follow the known-unknown categories partition strategies of [SMIE](https://github.com/YujieOuO/SMIE).
 
@@ -41,6 +41,7 @@ Please cite this work if you find it useful:.
   title={Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition},
   author={Chen, Yang and Guo, Jingcai and He, Tian and Lu, Xiaocheng and Wang, Ling},
   booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages = {778–786},
   year={2024}
 }
 ```
