@@ -25,7 +25,8 @@ As for known and unknown categories partition strategies that the official requi
 
 For the optimized experimental settings in Table 5, we follow the known-unknown categories partition strategies of [SMIE](https://github.com/YujieOuO/SMIE).
 
-
+# Shift-GCN Pretraining Weights
+You can download Shift-GCN pretraining weights from [BaiduDisk](https://pan.baidu.com/s/1fz7OAc1MS0ZNdBQADndozg?pwd=r5gd) or [Google Drive](https://drive.google.com/file/d/1O4HrjU0NkBFNCNhPNoPN4xyNDYps5R0D/view?usp=sharing) for convenience. Following the [Shift-GCN](https://github.com/kchengiva/Shift-GCN) procedures, you can train the skeleton encoder yourself.
 
 ## Acknowledgements
 
