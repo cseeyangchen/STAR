@@ -1,5 +1,5 @@
 # STAR
-This repo is the official implementation for [Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition](https://dl.acm.org/doi/10.1145/3664647.3681196). The paper is accepted to ACM MM 2024.
+This repo is the official implementation for [Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition](https://dl.acm.org/doi/10.1145/3664647.3681196). The paper is accepted to ACM MM 2024. The extended journal version, [STAR++](), has been accepted for publication in TCSVT 2025. The corresponding code repository is available [here](https://github.com/cseeyangchen/STAR_pp).
 
 **Note**: We conduct extensive experiments on three datasets in the **ZSL** and **GZSL** settings. 
 
